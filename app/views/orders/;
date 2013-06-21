@@ -1,0 +1,26 @@
+<div class="main_div">
+	<p text-align="center">购买导向图>>>>>>>></p>
+	<h1>商品确认</h1>
+
+	<!--<%= render :partial=>'users/shippingaddr',:locals => { :user => current_user } %>-->
+	<div class="prodinfo_div">
+	    <div class="prodthumb_div">
+		<img src="images/thumbs/bridge.jpg"></img>
+	    </div>
+	    <div class="proddetail_div">
+		<!--<ul>
+		    <li><span>商品名称：</span><span></span></li>
+		    <li><span>价格:</span><span></span></li>
+		    <li><span>数量:</span><span><input id="decrease" class="cbtn orange" type="button" value="-"><input id="pcount" class="pcount" type="text" value="1"><input id="increase" class="cbtn orange" type="button" value="+"></span></li>
+		</ul>-->
+	    </div>
+	</div>
+	<div class="order_form_div">
+		<%= render 'form' %>
+	</div>
+	<div class="shipping_addr_div>
+		 <%= render :partial=>'addresses/index', :locals=>{:address => current_user.addresses}%>	
+	</div>
+	<div><input id="next_step_btn" class="button orange" type="button" value="下一步"></div>
+</div>
+

@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>订单号:</b>
+  <%= @order.order_no %>
+</p>
+
+<p>
+  <b>商品名称:</b>
+  <%= link_to @product.name, product_path(@product)%>
+</p>
+
+<p>
+  <b>订单状态:</b>
+  <%= @order.os_id %>
+</p>
+
+<p>
+  <b>订购时间:</b>
+  <%= @order.created_at %>
+</p>
+
+<p>
+  <b>快递单号:</b>
+  <%= @order.ship_no %>
+</p>
+
+<%= form_tag("https://pay3.chinabank.com.cn/PayGate",:target=>"_blank") do%>
+  <%= hidden_field_tag(:v_mid,"22720755")%>
+  <%= hidden_field_tag(:v_oid,@order.order_no)%>
+  <%= hidden_field_tag(:v_amount,@order.total_price)%>
+  <%= hidden_field_tag(:v_moneytype,"CNY")%>
+  <%= hidden_field_tag(:v_url,"http://121.199.30.179:3000/callback")%>
+  <%= hidden_field_tag(:v_md5info,md5Generater(@product.price,"CNY",@order.order_no,"22720755","http://121.199.30.179:3000/callback","e276c0f810c8b810106d"))%>
+  <%= submit_tag("付款")%>
+<% end %>
+<%= link_to 'Edit', edit_order_path(@order) %> |
+<%= link_to 'Back', orders_path %>

@@ -1,0 +1,29 @@
+<% if signed_in? %>
+	<!--<div>
+		<input id="login_swith_btn" class="swith_btn" type="button" value="登录">&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to "注册",signup_path %>
+	</div>-->
+        <div id="user_div1" class="hidden1">
+                <%= form_for(user, :url=>{:controller=>'sessions',:action=>'create'}, :remote=>true) do |u| %>
+                        <%=u.label '用户名:'%>
+                        <%=u.text_field :username, :class=>"field"%>
+                        <%=u.label '密码:'%>
+                        <%=u.password_field :password, :class=>"field"%>
+                        <%= u.submit "登录",:class=>"button orange" %>
+			&nbsp;&nbsp;&nbsp;&nbsp;
+			<%= link_to "注册",signup_path,:class=>"button orange" %>
+                	<div style="color:red">
+				<% flash.each do |key, value| %>
+                        		<span class="alert alert-<%= key %>"><%= value %></span>
+                		<% end %>
+			</div>
+		<% end %>
+        </div>
+    <% else %>
+	<div class="logined_div">
+		<% flash.each do |key, value| %>
+	        	<span class="alert alert-<%= key %>"><%= value %></span>
+		<% end %>
+		<%= link_to current_user.username, user_path(current_user)%>&nbsp;&nbsp;&nbsp;
+                <%= button_to '退出', signout_path ,:form_class=>"inline_block",:class=>'button orange'%>
+        </div>
+    <% end %>

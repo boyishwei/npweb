@@ -1,0 +1,37 @@
+<%= form_for(@user, :remote=>true) do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label "用户名" %><br />
+    <%= f.text_field :username, :disabled=>true %>
+  </div>
+  <div class="field">
+    <%= f.label "密码" %><br />
+    <%= f.password_field :password %>
+  </div>
+  <div class="field">
+    <%= f.label "手机号码" %><br />
+    <%= f.text_field :phonenum %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label "生日" %><br />
+    <%= f.date_select :birthday,:start_year => 1920 %>
+  </div>
+  <div class="actions">
+    <%= f.submit "修改" %>
+  </div>
+<% end %>

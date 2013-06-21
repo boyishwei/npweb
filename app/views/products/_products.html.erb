@@ -1,0 +1,21 @@
+<table class="p_table">
+<% @products.each do |product| %>
+  <tr class="p_tr" id="p_<%= product.id %>">
+    <td class="p_name p_td"><%= product.name %></td>
+    <td class="p_img p_td"><img src="images/p_<%= product.id %>.jpg"></td>
+    <td class="p_price p_td">价格<br />￥<%= product.price %></td>
+    <td class="p_button p_td">
+    <%= form_for product, :url=>purchase_path do |p|%>
+	<%= p.hidden_field :id %>
+	<%= p.hidden_field :name %>
+	<%= p.hidden_field :price %>
+	<%= p.submit "购买", :class=>"button orange"%>
+    <% end %>
+	<!--<%= button_to "购买", purchase_path,:form_class=>"purchase_btn" %></td>-->
+    <td class="p_hidden p_td"><%= product.available %></td>
+    <td class="p_hidden p_td"><%= product.desc %></td>
+    <td class="p_hidden p_td"><%= product.inventory %></td>
+  </tr>
+<% end %>
+</table>
+

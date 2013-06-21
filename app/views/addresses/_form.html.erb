@@ -1,0 +1,8 @@
+<%= form_for( address, :remote=>true, :html=>{:class=>"hidden"})  do |f| %>
+<div>
+	<%= f.label "收货地址:" %> <%= f.text_field :address,:class=>"address_field" %>
+	<%= f.label "邮编:" %> <%= f.text_field :postcode,:size=>"6" %><%= f.hidden_field :user_id, :value=>current_user.id %>&nbsp;&nbsp;&nbsp;
+	<%= f.submit "Save", :class=>"button hidden",:id=>"saveAddr" %>
+	<%= button_tag "保存",:type=>"button",:class=>"button", :id=>"btn4save" %>
+</div>
+<% end %>

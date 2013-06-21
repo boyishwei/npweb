@@ -1,0 +1,14 @@
+	<div id="demo_div">
+		<%= form_tag(callback_path) do %></br>
+		<%= text_field_tag :v_oid,"78524490785a0bdf2f06"%></br>
+		<%= text_field_tag :v_pstatus,"20"%></br>
+		<%= text_field_tag :v_pstring,"支付成功"%></br>
+		<%= text_field_tag :v_pmode,"工商银行"%></br>
+		<%= text_field_tag :v_md5str,"md5"%></br>
+		<%= text_field_tag :v_amount,"0.01"%></br>
+		<%= text_field_tag :v_moneytype,"CNY"%></br>
+		<%= text_field_tag :v_remark1,"remark1"%></br>
+		<%= text_field_tag :v_remark2,"remark2"%></br>
+		<%= submit_tag "调用返回接口"%></br>
+		<% end %>
+        </div>

@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Classname:</b>
+  <%= @user_class.classname %>
+</p>
+
+<p>
+  <b>Classdesc:</b>
+  <%= @user_class.classdesc %>
+</p>
+
+
+<%= link_to 'Edit', edit_user_class_path(@user_class) %> |
+<%= link_to 'Back', user_classes_path %>

@@ -1,0 +1,108 @@
+body
+{
+	width: 80%;
+	margin: auto;
+}
+
+#header
+{
+	margin: 5px 0px 10px 0px;
+	padding-top: 20px;
+	padding-bottom: 10px;
+	border: thin  solid yellow;
+	margin-bottom: 5px;
+	background-color: white;
+	color: black;
+	display: -webkit-box; 
+    -webkit-box-orient: horizontal; 
+}
+
+.title_div
+{
+	padding-left: 100px;
+	padding-right: 500px;
+	font-size: 150%;
+	font-family: '¿¬Ìå',arial,georgia,verdana,helvetica,sans-serif;
+}
+.desc_div
+{
+	text-align: right;
+}
+
+#slide
+{
+	height: 430px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	border: 5px;
+}
+#camera
+{
+	height: 350px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+#thumbNail
+{
+	text-align: center;
+}
+
+.thumbnail_img
+{
+	cursor:pointer;
+	border: 3px solid white;
+}
+
+.thumbnail_hover
+{
+	cursor:pointer;
+	border: 3px solid yellow;
+}
+
+#camera img
+{
+	width: 100%;
+	height: 350px;
+	cursor:pointer;
+}
+
+#user_div
+{
+	margin-top: 1px;
+	height: 80px;
+	border: thin solid green;
+	border-color: yellow;
+	display: -webkit-box; 
+    -webkit-box-orient: horizontal; 
+}
+
+#user_zone
+{
+	padding: 24px 100px 30px 200px;
+	background-color: yellow;
+	background-image: url("../images/user_zone.png");
+	background-position:left center;
+	background-repeat:no-repeat;
+
+	font-family: Arial, sans-serif; 
+	color: white;
+}
+
+#ad_zone
+{
+	background-image: url("../images/product.png");
+	width: 450px;
+	height: 80px;
+	background-position:left center;
+	background-repeat:no-repeat;
+	-webkit-box-flex: 1
+}
+
+.prod_div
+{
+	height: 200px;
+	padding: 100px 400px 50px 400px;
+	border: thin solid green;
+	border-color: red;
+}

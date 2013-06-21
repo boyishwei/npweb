@@ -1,0 +1,7 @@
+<div class="ship_addrs">
+	<% addresses.each do |addr| %>
+	   <p><%= radio_button_tag(:ship_addr, "child")%><label for="child"><span><%= addr.address %></span><span><%= addr.postcode %></span></label></p>
+	<% end %>
+</div>
+<%= render :partial=>'addresses/form',:locals=>{ :address=>Address.new } %>
+	<%= button_tag "添加收货地址",:type=>"button",:class=>"button addAddr_btn switcher", :id=>"addAddr" %>

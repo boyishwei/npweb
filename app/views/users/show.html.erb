@@ -1,0 +1,63 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>用户名:</b>
+  <%= @user.username %>
+</p>
+
+<p>
+  <b>手机号码:</b>
+  <%= @user.phonenum %>
+</p>
+
+<p>
+  <b>Email地址:</b>
+  <%= @user.email %>
+</p>
+
+<p>
+  <b>生日:</b>
+  <%= @user.birthday %>
+</p>
+
+<p>
+  <b>注册时间:</b>
+  <%= @user.regtime %>
+</p>
+<p>收货地址:</p>
+<p>
+  <b>地址1:</b>
+  <%= @user.address %>
+</p>
+<% if @user.address2.nil? %>
+<p>
+  <b>地址2:</b>
+  <%= @user.address2 %>
+</p>
+<% end %>
+<% if @user.address2.nil? %>
+<p>
+  <b>地址3:</b>
+  <%= @user.address3 %>
+</p>
+<% end %>
+<% if @user.address2.nil? %>
+<p>
+  <b>地址4:</b>
+  <%= @user.address4 %>
+</p>
+<% end %>
+<% if @user.address2.nil? %>
+<p>
+  <b>地址5:</b>
+  <%= @user.address5 %>
+</p>
+<% end %>
+<% if @user.address2.nil? %>
+<p>
+  <b>地址6:</b>
+  <%= @user.address6 %>
+</p>
+<% end %>
+
+<%= link_to '修改用户资', edit_user_path(@user) %>

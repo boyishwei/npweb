@@ -1,0 +1,25 @@
+<h1>选择收货地址</h1>
+<%= form_for(user) do |f| %>
+ <div class="field">
+   <% if !(user.address.nil?) %>
+     <%= radio_button_tag(:shipping_addr, "child") %> <%= label_tag(:shipping_addr_child, user.address) %>
+     <%= f.hidden_field :address%><br />
+   <% end %>
+   <% if !(user.address2.nil?) %>
+     <%= radio_button_tag(:shipping_addr, "child") %> <%= label_tag(:shipping_addr_child, user.address2) %></br>
+   <% end %>
+   <% if !(user.address3.nil?) %>
+     <%= radio_button_tag(:shipping_addr, "child") %> <%= label_tag(:shipping_addr_child, user.address3) %></br>
+   <% end %>
+   <% if !(user.address4.nil?) %>
+     <%= radio_button_tag(:shipping_addr, "child") %> <%= label_tag(:shipping_addr_child, user.address4) %></br>
+   <% end %>
+   <% if !(user.address5.nil?) %>
+     <%= radio_button_tag(:shipping_addr, "child") %> <%= label_tag(:shipping_addr_child, user.address5) %></br>
+   <% end %>
+   <% if !(user.address6.nil?) %>
+     <%= radio_button_tag(:shipping_addr, "child") %> <%= label_tag(:shipping_addr_child, user.address6) %></br>
+   <% end %>
+   <%= button_tag "添加新的收货地址", :type=>"button", :class=>"add_addr"%>
+</div>
+<% end %>

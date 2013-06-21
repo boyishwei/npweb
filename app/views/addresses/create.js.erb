@@ -1,0 +1,3 @@
+alert("收货地址添加成功!");
+$(".ship_manage_div").html("<%= j render :partial=>'addresses/index', :locals=>{:addresses => current_user.addresses}%>");
+$("#new_address").hide(250);

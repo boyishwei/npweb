@@ -1,0 +1,16 @@
+	<div id="slide">
+		<div id="camera">
+			<img id="camera_img" src="images/bridge.jpg">
+		</div>
+		<div id="thumbnail">
+			<img class="thumbnail_img thumbnail_hover" src="images/thumbs/bridge.jpg" onmouseover="this.className='thumbnail_img thumbnail_hover'" onmouseout="this.className='thumbnail_img'" />
+			<img class="thumbnail_img" src="images/thumbs/shelter.jpg" onmouseover="this.className='thumbnail_img thumbnail_hover'" onmouseout="this.className='thumbnail_img'" />
+			<img class="thumbnail_img" src="images/thumbs/leaf.jpg" onmouseover="this.className='thumbnail_img thumbnail_hover'" onmouseout="this.className='thumbnail_img'" />
+			<img class="thumbnail_img" src="images/thumbs/road.jpg" onmouseover="this.className='thumbnail_img thumbnail_hover'" onmouseout="this.className='thumbnail_img'" />
+			<img class="thumbnail_img" src="images/thumbs/sea.jpg" onmouseover="this.className='thumbnail_img thumbnail_hover'" onmouseout="this.className='thumbnail_img'" />
+		</div>
+	</div>
+	<div class="login_div"><%= render :partial => 'users/login',:locals => { :user => User.new } %></div>
+	<div class="prod_div">
+                <%= render 'products/products' %>
+        </div>
